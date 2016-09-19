@@ -3,12 +3,12 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 	part1 = Particle();
-	particleList = list<Particle>(5);
+	particleList = list<Particle>(0);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-	part1.move();
+	//part1.move();
 
 	for each (Particle p in particleList)
 	{
@@ -18,7 +18,7 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	part1.draw();
+//	part1.draw();
 
 	for each (Particle p in particleList)
 	{

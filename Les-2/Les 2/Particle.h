@@ -11,6 +11,9 @@ public:
 	ofVec2f speed;
 	long lifeTime;
 
+	float time = ofGetElapsedTimef();
+	float angle;
+
 	ofColor centerColour = ofColor::white;
 	ofColor innerColour;
 	ofColor outerColour;

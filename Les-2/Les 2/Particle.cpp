@@ -19,11 +19,6 @@ void Particle::setup() {
 void Particle::move() {
 
 	position += speed;
-
-	//position.x = position.x + cos(90)*radius;
-	//position.y = position.y + sin(90)*radius;
-	//angle = time * 20;
-	//ofRotate(angle, 0, 1, 0);
 }
 
 void Particle::draw() {
@@ -35,4 +30,11 @@ void Particle::draw() {
 
 	ofSetColor(centerColour);
 	ofDrawCircle(position.x, position.y, radius * 0.25);
+}
+
+void Particle::setColor(ofColor outer, ofColor inner, ofColor center) {
+	
+	outerColour = outer;
+	innerColour = inner;
+	centerColour = center;
 }

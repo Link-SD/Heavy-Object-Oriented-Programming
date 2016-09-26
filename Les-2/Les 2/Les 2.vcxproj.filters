@@ -10,6 +10,12 @@
     <ClCompile Include="Particle.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\CurvingParticle.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleEmitter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -21,6 +27,12 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="Particle.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CurvingParticle.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleEmitter.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

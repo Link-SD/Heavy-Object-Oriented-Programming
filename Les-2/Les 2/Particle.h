@@ -9,6 +9,8 @@ public:
 	ofPoint position;
 	float radius;
 	ofVec2f speed;
+	
+
 	long lifeTime;
 
 	float time = ofGetElapsedTimef();
@@ -24,6 +26,7 @@ public:
 	void move();
 	void draw();
 
+	void setColor(ofColor outer, ofColor inner, ofColor center);
 
 };
 

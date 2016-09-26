@@ -172,11 +172,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Particle.cpp" />
+    <ClCompile Include="ParticleEmitter.cpp" />
+    <ClCompile Include="src\CurvingParticle.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Particle.h" />
+    <ClInclude Include="ParticleEmitter.h" />
+    <ClInclude Include="src\CurvingParticle.h" />
     <ClInclude Include="src\ofApp.h" />
   </ItemGroup>
   <ItemGroup>

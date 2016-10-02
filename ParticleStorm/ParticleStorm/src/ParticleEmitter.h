@@ -5,7 +5,9 @@ class ParticleEmitter
 {
 public:
 	ParticleEmitter();
-	
+
+	int maxParticles;
+
 	void setOrigin(int x, int y);
 
 	void setColors(ofColor center, ofColor inner, ofColor outer);

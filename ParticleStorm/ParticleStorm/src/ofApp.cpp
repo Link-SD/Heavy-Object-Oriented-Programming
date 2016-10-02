@@ -5,8 +5,9 @@ void ofApp::setup(){
 	ofBackground(ofColor::honeyDew);
 
 	emitter = ParticleEmitter();
+	emitter.maxParticles = 10;
 	emitter.setOrigin(ofGetWidth() / 2, ofGetHeight() / 2);
-	emitter.setCurvingParticleRatio(.8);
+	emitter.setCurvingParticleRatio(.5);
 	
 	//Optional if only one color is wanted
 	/*emitter.setColors(
@@ -22,8 +23,11 @@ void ofApp::update(){
 	{
 		particles[i]->move();
 	}
-	Particle* newParticle = emitter.emit();
 
+
+	if (particles.size() <= emitter.maxParticles - 1) {
+		Particle* newParticle = emitter.emit();
+	
 	//comment this section to stop spawning particles with different colors;
 	newParticle->setColors(
 		ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255)),
@@ -32,6 +36,7 @@ void ofApp::update(){
 	//<<>>
 	
 	particles.push_back(newParticle);
+	}
 }
 
 //--------------------------------------------------------------

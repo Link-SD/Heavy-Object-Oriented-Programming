@@ -3,6 +3,7 @@
 
 ParticleEmitter::ParticleEmitter()
 {
+	
 }
 
 void ParticleEmitter::setOrigin(int x, int y)

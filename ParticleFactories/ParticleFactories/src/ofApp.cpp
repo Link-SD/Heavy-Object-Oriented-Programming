@@ -12,6 +12,14 @@ void ofApp::setup(){
 	emitter2.setOrigin(400, 400);
 	emitter2.setCurvingParticleRatio(0.8);
 
+	emitter3 = ParticleEmitter();
+	emitter3.setOrigin(500, 500);
+	emitter3.setColors(
+		ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255)),
+		ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255))
+	);
+	emitter3.setCurvingParticleRatio(0.5);
+
 }
 
 //--------------------------------------------------------------
@@ -25,6 +33,10 @@ void ofApp::update(){
 
 	Particle* freshParticle2 = emitter2.emit();
 	particles.push_back(freshParticle2);
+
+	Particle* freshParticle3 = emitter3.emit();
+	particles.push_back(freshParticle3);
+
 }
 
 //--------------------------------------------------------------

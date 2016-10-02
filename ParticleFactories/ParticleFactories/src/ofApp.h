@@ -14,4 +14,5 @@ class ofApp : public ofBaseApp{
 		
 		ParticleEmitter emitter1;
 		ParticleEmitter emitter2;
+		ParticleEmitter emitter3;
 };

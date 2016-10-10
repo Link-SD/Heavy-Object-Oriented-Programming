@@ -1,6 +1,9 @@
 #pragma once
 
 #include "ofMain.h"
+
+#define MAX_LIFETIME 150
+
 class Particle
 {
 	public:
@@ -12,6 +15,7 @@ class Particle
 
 		void setColors(ofColor center, ofColor inner, ofColor outer);
 
+		bool isDead();
 
     protected:
 		ofPoint position;

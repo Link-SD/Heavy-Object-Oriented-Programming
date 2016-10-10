@@ -21,6 +21,8 @@ void ParticleEmitter::setColors(ofColor centerColor, ofColor innerColor, ofColor
 void ParticleEmitter::setCurvingParticleRatio(float ratio)
 {
 	curvingParticleRatio = ratio;
+
+	
 }
 
 Particle* ParticleEmitter::emit() {
@@ -35,3 +37,4 @@ Particle* ParticleEmitter::emit() {
 	newParticle->setColors(center, inner, outer);
 	return newParticle;
 }
+

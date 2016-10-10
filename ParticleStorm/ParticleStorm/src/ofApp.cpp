@@ -5,7 +5,7 @@ void ofApp::setup(){
 	ofBackground(ofColor::honeyDew);
 
 	emitter = ParticleEmitter();
-	emitter.maxParticles = 10;
+	emitter.maxParticles = 50;
 	emitter.setOrigin(ofGetWidth() / 2, ofGetHeight() / 2);
 	emitter.setCurvingParticleRatio(.5);
 	
@@ -25,18 +25,32 @@ void ofApp::update(){
 	}
 
 
-	if (particles.size() <= emitter.maxParticles - 1) {
+	/*if (particles.size() <= emitter.maxParticles - 1) {
 		Particle* newParticle = emitter.emit();
+	*/
 	
-	//comment this section to stop spawning particles with different colors;
-	newParticle->setColors(
-		ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255)),
-		ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255)),
-		ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255)));
-	//<<>>
 	
-	particles.push_back(newParticle);
+	if (ofGetFrameNum() % 5 == 0) {
+		Particle* newParticle = emitter.emit();
+		
+
+		//comment this section to stop spawning particles with different colors;
+		newParticle->setColors(
+			ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255)),
+			ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255)),
+			ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255)));
+		//<<>>
+
+		particles.push_back(newParticle);
 	}
+
+
+
+	
+	reaper.destroyParticle(particles);
+
+	ofSetWindowTitle("Particles: " + ofToString(particles.size()));
+	
 }
 
 //--------------------------------------------------------------

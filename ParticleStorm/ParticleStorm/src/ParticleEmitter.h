@@ -1,5 +1,6 @@
 #pragma once
 #include "Particle.h"
+#include "ParticleReaper.h"
 
 class ParticleEmitter
 {

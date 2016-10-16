@@ -13,7 +13,7 @@ class ofApp : public ofBaseApp{
 
 		vector<Particle*> particles;
 
-		ParticleEmitter emitter;
+		
 		ParticleReaper reaper;
 		void keyPressed(int key);
 };

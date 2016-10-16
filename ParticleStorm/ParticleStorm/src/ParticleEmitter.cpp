@@ -5,6 +5,15 @@ ParticleEmitter::ParticleEmitter()
 {
 	
 }
+ParticleEmitter* ParticleEmitter::instance() {
+	if (!ParticleEmitter::currentInstance) {
+		ParticleEmitter::currentInstance = new ParticleEmitter();
+	}
+	return ParticleEmitter::currentInstance;
+}
+
+ParticleEmitter* ParticleEmitter::currentInstance = 0;
+
 
 void ParticleEmitter::setOrigin(int x, int y)
 {

@@ -5,7 +5,10 @@
 class ParticleEmitter
 {
 public:
-	ParticleEmitter();
+	
+
+	static ParticleEmitter* instance();
+
 
 	int maxParticles;
 
@@ -18,6 +21,9 @@ public:
 	void setCurvingParticleRatio(float ratio);
 
 private:
+	ParticleEmitter();
+	static ParticleEmitter* currentInstance;
+
 	int originX;
 	int originY;
 	float curvingParticleRatio;

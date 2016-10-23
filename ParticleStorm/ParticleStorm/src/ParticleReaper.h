@@ -6,6 +6,6 @@ class ParticleReaper
 public:
 	ParticleReaper();
 
-	void destroyParticle(vector<Particle*>& particles);
+	void destroyParticle(vector<Particle*>& particles) const;
 };
 

@@ -34,7 +34,7 @@ void ParticleEmitter::setCurvingParticleRatio(float ratio)
 	
 }
 
-Particle* ParticleEmitter::emit() {
+Particle* ParticleEmitter::emit() const {
 	Particle* newParticle;
 
 	if (ofRandom(1) > (1 - curvingParticleRatio)) {

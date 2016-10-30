@@ -9,14 +9,14 @@ public:
 
 	static ParticleEmitter* instance();
 
-
-	int maxParticles;
+	//Dit is een const omdat het tijdens runtime niet veranderd hoeft te worden.
+	const int MAX_PARTICLES = 50;
 
 	void setOrigin(int x, int y);
 
 	void setColors(ofColor center, ofColor inner, ofColor outer);
 
-	Particle* emit();
+	Particle* emit() const;
 
 	void setCurvingParticleRatio(float ratio);
 

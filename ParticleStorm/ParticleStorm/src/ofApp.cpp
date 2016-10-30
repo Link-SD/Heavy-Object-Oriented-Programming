@@ -2,9 +2,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-	ofBackground(ofColor::honeyDew);
-
-	ParticleEmitter::instance()->maxParticles = 50;
+	ofBackground(ofColor::black);
 	
 	ParticleEmitter::instance()->setOrigin(ofGetWidth() / 2, ofGetHeight() / 2);
 	ParticleEmitter::instance()->setCurvingParticleRatio(.5);
@@ -23,22 +21,17 @@ void ofApp::update(){
 	{
 		particles[i]->move();
 	}
-
-
-	/*if (particles.size() <= emitter.maxParticles - 1) {
-		Particle* newParticle = emitter.emit();
-	*/
 	
 	
-	if (ofGetFrameNum() % 5 == 0) {
+	if (particles.size() < ParticleEmitter::instance()->MAX_PARTICLES) {
 		Particle* newParticle = ParticleEmitter::instance()->emit();
 		
 
 		//comment this section to stop spawning particles with different colors;
 		newParticle->setColors(
-			ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255)),
-			ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255)),
-			ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255)));
+			ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255)),
+			ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255)),
+			ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255)));
 		//<<>>
 
 		particles.push_back(newParticle);
